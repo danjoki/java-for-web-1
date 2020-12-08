@@ -1,3 +1,4 @@
+import EncryptionLogic.Encrypt;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,6 +14,10 @@ public class caesarCipherTest {
 
     @Test
     public void testEncryption_encryptionValidation_boolean(){
-
+        Encrypt encrypt = new Encrypt();
+        String input = "My name is Daniel";
+        encrypt.setInput(input);
+        String encryptedString = "GS HUGY CM XUqHCYF";
+        assertEquals(encryptedString, encrypt.getOutput());
     }
 }
