@@ -1,16 +1,19 @@
 import EncryptionLogic.Decrypt;
 import EncryptionLogic.Encrypt;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class App {
 
     private static String[] alphabets = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T","U", "V","W", "X", "Y", "Z"};
 
-    public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        String rawString = input.next().toUpperCase();
-        //stringValidator(rawString);
+    public static void main(String[] args) throws FileNotFoundException {
+        File content = new File("src/main/resources/text.txt");
+        Scanner input = new Scanner(content);
+        String rawString = input.nextLine().toUpperCase();
+//        stringValidator(rawString);
         Encrypt encrypt = new Encrypt();
         encrypt.setKey(10);
         encrypt.setInput(rawString);

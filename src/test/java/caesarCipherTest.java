@@ -18,7 +18,7 @@ public class caesarCipherTest {
         Encrypt encrypt = new Encrypt();
         encrypt.setKey(23);
         encrypt.setInput("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG");
-        String encryptedString = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
+        String encryptedString = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";//This was encoded using key as 20, any other key will fail.
         assertEquals(encryptedString, encrypt.getOutput());
     }
 
@@ -26,7 +26,7 @@ public class caesarCipherTest {
     public void testDecryption_encryptString_boolean(){
         Decrypt decrypt = new Decrypt();
         decrypt.setKey(20);
-        decrypt.setInput("GS HUGY CM XUHCYF");
+        decrypt.setInput("GS HUGY CM XUHCYF"); //This was encoded using key as 20, any other key will fail.
         String rawString = "My name is Daniel".toUpperCase();
         assertEquals(rawString, decrypt.getOutput());
     }
