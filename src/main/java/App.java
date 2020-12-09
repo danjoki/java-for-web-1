@@ -1,11 +1,34 @@
+import EncryptionLogic.Decrypt;
 import EncryptionLogic.Encrypt;
 
 import java.util.Scanner;
 
 public class App {
+
+    private static String[] alphabets = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T","U", "V","W", "X", "Y", "Z"};
+
     public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        String rawString = input.next().toUpperCase();
+        //stringValidator(rawString);
         Encrypt encrypt = new Encrypt();
-        encrypt.setInput("My name is Daniel");
-        System.out.println("Output: ".concat(encrypt.getOutput()));
+        encrypt.setKey(10);
+        encrypt.setInput(rawString);
+        Decrypt decrypt = new Decrypt();
+        decrypt.setKey(10);
+        decrypt.setInput(encrypt.getOutput());
+        System.out.println("Input String: ".concat(rawString)
+                .concat("\n Encrypted String: ").concat(encrypt.getOutput())
+                .concat("\n Decrypted String: ").concat(decrypt.getOutput()));
+    }
+
+    private static void stringValidator(String text) throws RuntimeException{
+        char[] phrase = text.toCharArray();
+        for (char letter : phrase){
+            for (int i = 0; i<=alphabets.length; i++){
+                if (!String.valueOf(letter).equalsIgnoreCase(alphabets[i]))
+                    throw new RuntimeException();
+            }
+        }
     }
 }
