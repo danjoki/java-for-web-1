@@ -1,0 +1,5 @@
+++++++++++++++++++++++++++++++++++++++++++++++++
+Raw Text: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+Encoded Text: DRO AESMU LBYGX PYH TEWZC YFOB DRO VKJI NYQ
+Decoded Text: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+++++++++++++++++++++++++++++++++++++++++++++++++
