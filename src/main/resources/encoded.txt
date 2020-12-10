@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++
-Raw Text: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
-Encoded Text: DRO AESMU LBYGX PYH TEWZC YFOB DRO VKJI NYQ
-Decoded Text: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+Raw Text: MY NAME IS PETER
+Encoded Text: JV KXJB FP MBQBO
+Decoded Text: MY NAME IS PETER
 ++++++++++++++++++++++++++++++++++++++++++++++++

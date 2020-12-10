@@ -15,12 +15,15 @@ public class App {
         File rawText = new File("src/main/resources/text.txt");
         Scanner input = new Scanner(rawText);
         String rawString = input.nextLine().toUpperCase();
-//        stringValidator(rawString);
+        int key = 1;
+        if (input.hasNext())
+            key = input.nextInt();
+        System.out.println("Key: ".concat(String.valueOf(key)));
         Encrypt encrypt = new Encrypt();
-        encrypt.setKey(10);
+        encrypt.setKey(key);
         encrypt.setInput(rawString);
         Decrypt decrypt = new Decrypt();
-        decrypt.setKey(10);
+        decrypt.setKey(key);
         decrypt.setInput(encrypt.getOutput());
         String fileName = "src/main/resources/encoded.txt";
         File f = new File(fileName);
@@ -33,7 +36,7 @@ public class App {
     }
 
     private static void writeToFile(String rawString, Encrypt encrypt, Decrypt decrypt, String fileName) throws IOException {
-        System.out.println("Please check results on this file: ");
+        System.out.println("Please check results on this file: ".concat(fileName));
         FileWriter write = new FileWriter(fileName);
         write.write("++++++++++++++++++++++++++++++++++++++++++++++++");
         write.write("\nRaw Text: ".concat(rawString));
